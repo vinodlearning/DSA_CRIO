@@ -89,4 +89,129 @@ function revesreStr(str){
 }
 
 
-console.log(reverseCharacters("abc def ghi"));
+//console.log(reverseCharacters("abc def ghi"));
+
+function maxProduct2(n,nums) {
+    let firstHigh=0;
+    let secondHigh=0;
+    
+    for(let i=0;i<nums.length;i++){
+         if(nums[i]>=firstHigh){
+             secondHigh=firstHigh;
+             firstHigh=nums[i];
+
+         }else if(nums[i]>=secondHigh){
+            secondHigh=nums[i];
+         }
+        
+
+    }
+    
+    return  ((firstHigh-1)*(secondHigh-1));
+}
+function maxNumber(arr){
+    let mx=arr[0];
+    let index=0;
+
+    let obj={};
+    for(key in obj){
+         if(key.hasOwnProperty(obj)){
+            obj[key]
+
+         }
+    }
+    for(let i=1;i<arr.length;i++){
+         if(mx<=arr[i]){
+            mx=arr[i]
+            index=i;
+         }
+
+    }
+    return index;
+
+}
+
+
+
+//console.log(maxNumber([3,9,4,5,2,9]));
+//console.log(maxProduct2(4,[3,4,5,2]));
+
+function robotReturnToOrigin(moves) {
+   let x=0;
+   let y=0;
+    for(const el of moves){
+         if(el==="R"){
+            x++;
+
+         }else if(el==="L"){
+            x--;
+
+         }else if(el==="U"){
+            y++;
+
+         } else{
+            y--;
+         }
+
+    }
+
+    return x===0&&y===0;
+}
+
+//console.log(robotReturnToOrigin("LL"));
+function stringCompress(n,str) {
+        let mid=str.length/2;
+        let result="";
+        for(let i=mid;i<str.length;i++){
+        if((str[mid]==0&&str[mid+1]==1)||(str[mid]==1&&str[mid+1]==0)){
+
+                  
+            }
+
+        }
+        
+
+}
+
+
+function additionOfMatrix(matrix1, matrix2) {
+   
+        let result=[];
+        for(let i=0;i<matrix1.length;i++){
+            let row=matrix1[i];
+            result[i]=[];
+             for(let j=0;j<row.length;j++){
+                result[i][j]=matrix1[i][j]+matrix2[i][j];
+             }
+
+        }
+        console.log(result);
+}
+
+
+/* console.log(additionOfMatrix([[1 ,2 ,3],
+
+    [4 ,5 ,6]],
+    
+    [[1 ,1 ,1],
+    
+    [1, 1, 1]])); */
+
+
+
+    function equalVowelsAndConsonants(str) {
+        let ovw="aeiou";
+        let consnt="bcdfghjklmnpqrstvwxyz";
+        let ovCount=0;
+        let consntCount=0;
+
+        for(let i=0;i<str.length;i++){
+            if(ovw.includes(str[i])) ovCount++;
+            if(consnt.includes(str[i])) consntCount++;
+
+
+        }
+        return ovCount===consntCount;
+    }
+
+    console.log(equalVowelsAndConsonants("vinod"));
