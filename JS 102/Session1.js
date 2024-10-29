@@ -5,14 +5,14 @@ function twoSumInSortedArray(n, arr, target_sum) {
     console.log("twoSumInSortedArray---------------")
     let i=0;
     let j=n-1;
-    while(i<=j){
+    while(i<j){
         let sum=arr[i]+arr[j];
             if(sum==target_sum){
                 return true;
             }else if(sum>target_sum){
                 j--;
             }else {
-                i--;
+                i++;
             }
 
 
