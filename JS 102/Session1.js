@@ -20,4 +20,30 @@ function twoSumInSortedArray(n, arr, target_sum) {
     return false;
 }
 
-console.log(twoSumInSortedArray(5,[2 ,4 ,5 ,8 ,9],7));
+//console.log(twoSumInSortedArray(38,arr,16));
+
+// Time complexity is O(nlongn--> bcz of sort)
+function twoSum(nums, target) {
+    let duplicateArr=[...nums];
+    let left=0;
+    let right=nums.length-1;
+    nums.sort((a,b)=>a-b);
+    while(left<right){
+        const sum=nums[left]+nums[right];
+        if(sum==target){
+            break;
+        }else if(sum>target){
+            right--;
+        }else{
+            left++;
+        }
+    }
+
+    let firtsIdx=duplicateArr.indexOf(nums[left]);
+    let secondIdx=duplicateArr.indexOf(nums[right]);
+
+    return [firtsIdx,secondIdx];
+
+}
+
+console.log(twoSum([2, 4, 5, 9, 8],7));
