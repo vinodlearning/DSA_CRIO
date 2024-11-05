@@ -102,4 +102,38 @@ function mergeSortedArray(n, nums1, m, nums2) {
    return resultArr;
 }
 
-console.log(mergeSortedArray(3,[1,2,3],3,[2, 5, 6]));
+//console.log(mergeSortedArray(3,[1,2,3],3,[2, 5, 6]));
+
+/**
+ * Remove duplicates such that each element occurs at most twice
+ * 
+ * Problem Description
+Given a sorted array, remove the duplicates in-place, such that each element in the array appears at most twice, and return the new length.
+
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+ */
+
+function removeDuplicatesFromSortedArrayII(n, arr) {
+
+}
+
+console.log(removeDuplicatesFromSortedArrayII(7,[2, 2, 2, 3, 4, 4, 9]));
+
+
+/**
+ * 
+ * 
+ * 
+ * Find Triplet with Maximum Sum in Unsorted Array [Pattern Introduction]
+ * Problem Description
+Given an array nums, you need to find the maximum sum of triplet (nums[i] + nums[j] + nums[k])
+ such that 0 <= i < j < k and nums[i] < nums[j] < nums[k]. 
+If no such triplet exists print 0.
+ * 
+ * 
+ */
+
+function maxSumTriplet(n, nums) {
+    let ans = 0;
+    return ans;
+}
