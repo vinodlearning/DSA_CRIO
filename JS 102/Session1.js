@@ -136,12 +136,12 @@ function removeDuplicatesFromSortedArrayII(n, arr) {
 
    // let i=0;//for increment 
         for(let i=0;i<n;i++){
-            if(j>=2&&arr[i]==arr[j-1]&&arr[i]==arr[j-1])
+            if(j>=2&&arr[i]==arr[j-1]&&arr[i]==arr[j-2])
                 continue;
             arr[j++]=arr[i];
-            j++;
+            
         }
-        console.log(arr.length);
+        
 
         return j;
 
