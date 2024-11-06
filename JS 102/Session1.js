@@ -117,7 +117,38 @@ function removeDuplicatesFromSortedArrayII(n, arr) {
 
 }
 
-console.log(removeDuplicatesFromSortedArrayII(7,[2, 2, 2, 3, 4, 4, 9]));
+//console.log(removeDuplicatesFromSortedArrayII(7,[2, 2, 2, 3, 4, 4, 9]));
+
+
+
+/**
+ * Remove duplicates such that each element occurs at most twice
+ * 
+ * Problem Description
+Given a sorted array, remove the duplicates in-place, such that each element in the array appears at most twice, and return the new length.
+
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+ */
+
+function removeDuplicatesFromSortedArrayII(n, arr) {
+
+    let j=0// last freez index
+
+   // let i=0;//for increment 
+        for(let i=0;i<n;i++){
+            if(j>=2&&arr[i]==arr[j-1]&&arr[i]==arr[j-1])
+                continue;
+            arr[j++]=arr[i];
+            j++;
+        }
+        console.log(arr.length);
+
+        return j;
+
+}
+console.log(removeDuplicatesFromSortedArrayII(7,[2, 2 ,2, 3 ,4, 4,9]));
+
+
 
 
 /**
